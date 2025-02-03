@@ -1,0 +1,13 @@
+services:
+  pg:
+    image: docker.io/bitnami/postgresql:16-debian-11
+    ports:
+      - '5432:5432'
+    volumes:
+      - './pg-vol:/bitnami/postgresql'
+    environment:
+      - POSTGRESQL_PASSWORD=Password123
+
+volumes:
+  pg:
+    name: db-vol-occc
